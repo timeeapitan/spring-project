@@ -21,9 +21,9 @@ public class MyLoggerConfig {
     }
 
     private void initLogger() {
-        // paarse levels
+        // parse levels
         Level rootLevel = Level.parse(rootLoggerLevel);
-        Level printeedLevel = Level.parse(printedLoggerLevel);
+        Level printedLevel = Level.parse(printedLoggerLevel);
 
         // get logger for app context
         Logger applicationContextLogger = Logger.getLogger(AnnotationConfigApplicationContext.class.getName());
@@ -36,7 +36,7 @@ public class MyLoggerConfig {
 
         // set up console handler
         ConsoleHandler consoleHandler = new ConsoleHandler();
-        consoleHandler.setLevel(printeedLevel);
+        consoleHandler.setLevel(printedLevel);
         consoleHandler.setFormatter(new SimpleFormatter());
 
         // add handle to the logger
